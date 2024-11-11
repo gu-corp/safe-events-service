@@ -139,7 +139,7 @@ jobs:
         with:
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: safeglobal/safe-events-service:staging
+          tags: gulabs/safe-events-service:staging
           cache-from: type=gha
           cache-to: type=gha,mode=max
       - name: Deploy Tag
@@ -149,8 +149,8 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            safeglobal/safe-events-service:${{ github.event.release.tag_name }}
-            safeglobal/safe-events-service:latest
+            gulabs/safe-events-service:${{ github.event.release.tag_name }}
+            gulabs/safe-events-service:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
